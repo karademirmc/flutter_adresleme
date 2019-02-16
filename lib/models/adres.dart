@@ -8,13 +8,13 @@ class Adres {
   Adres(this.idKod,
       this.lokasyonunAdi,
       this.lokasyonTuru,
-      this.altDugumVarmi); // kategori eklerken kulllan , id otomatik oluşturuluyor
+      this.altDugumVarmi);
 
   Adres.withID(this.id,
       this.idKod,
       this.lokasyonunAdi,
       this.lokasyonTuru,
-      this.altDugumVarmi); // kategorileri db den okurken kullanılır
+      this.altDugumVarmi);
 
   Map<String, dynamic> toMap() {
     var map = Map<String, dynamic>();
