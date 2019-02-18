@@ -35,8 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-var a = "Denizli";
-debugPrint("mck::::::::::"+a.substring(0,3));
+
     _databaseHelper = DatabaseHelper();
     tumAdresler = List<Adres>();
 
