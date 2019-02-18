@@ -35,7 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
+var a = "Denizli";
+debugPrint("mck::::::::::"+a.substring(0,3));
     _databaseHelper = DatabaseHelper();
     tumAdresler = List<Adres>();
 
@@ -52,9 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
           onPressed: () {
             tumAdresler.clear();
-            if(kod.length>=2)
-            kod = kod.substring(0, kod.length - 2);
-            print("kod :" +kod);
+            if(kod.length>=4)
+              {
+                kod = kod.substring(0, kod.length - 4);
+                kod += "__";
+              }
+
             _listeYenile();
           },
           child: Icon(Icons.arrow_back)),
@@ -82,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
     await _databaseHelper.sqlCalistir(kod).then((gelenAdresler) {
       tumAdresler = gelenAdresler;
       setState(() {});
+      print("kod :" +kod);
     });
   }
 }
