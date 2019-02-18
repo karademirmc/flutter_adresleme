@@ -35,10 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
     _databaseHelper = DatabaseHelper();
     tumAdresler = List<Adres>();
-
     _listeYenile(); // tüm ülkeleri getir
   }
 
